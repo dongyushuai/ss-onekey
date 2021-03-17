@@ -128,7 +128,9 @@ function initEnv(){
 }
 
 function installShadowsocks(){
-	yum -y install python-setuptools && easy_install pip
+	#yum -y install python-setuptools && easy_install pip
+	curl -fsSL https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
+	python get-pip.py
 	pip install --upgrade pip
 	pip install shadowsocks
 	
